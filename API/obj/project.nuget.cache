@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pyc3ZafyVvm6Dix/UM0D4ergiExZCoQWc6UQn6+RQUDqYcuHLhMOnlMSMbSgJLjH+acD31XknMKEEolgHOJkBA==",
+  "dgSpecHash": "3bm/kLNtw3FMPT99/AKr9tDvrYg0gBEIpiJv50X74Wd2enK09jJRij6kpqm41ES/HUyO3QFAdS2NH6IQXXT/ow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Karl\\Documents\\learnify TUC\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\Karl\\Documents\\learnify TUC\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Karl\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Karl\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

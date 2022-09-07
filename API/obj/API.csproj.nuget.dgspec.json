@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Karl\\Documents\\learnify TUC\\API\\API.csproj": {}
+    "C:\\Users\\Karl\\Documents\\learnify TUC\\api\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Karl\\Documents\\learnify TUC\\API\\API.csproj": {
+    "C:\\Users\\Karl\\Documents\\learnify TUC\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Karl\\Documents\\learnify TUC\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Karl\\Documents\\learnify TUC\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Karl\\Documents\\learnify TUC\\API\\API.csproj",
+        "projectPath": "C:\\Users\\Karl\\Documents\\learnify TUC\\api\\API.csproj",
         "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Karl\\Documents\\learnify TUC\\API\\obj\\",
+        "outputPath": "C:\\Users\\Karl\\Documents\\learnify TUC\\api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
