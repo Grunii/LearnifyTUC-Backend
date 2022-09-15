@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Karl\\Documents\\learnify TUC\\api\\API.csproj": {}
+    "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Karl\\Documents\\learnify TUC\\api\\API.csproj": {
+    "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Karl\\Documents\\learnify TUC\\api\\API.csproj",
+        "projectUniqueName": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Karl\\Documents\\learnify TUC\\api\\API.csproj",
-        "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Karl\\Documents\\learnify TUC\\api\\obj\\",
+        "projectPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\karle\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Karl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\karle\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Karl\\Documents\\learnify TUC\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Karl\\Documents\\learnify TUC\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -56,6 +55,12 @@
               "version": "[5.0.17, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.17, )"
             },
@@ -82,24 +87,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Karl\\Documents\\learnify TUC\\Entity\\Entity.csproj": {
+    "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Karl\\Documents\\learnify TUC\\Entity\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "C:\\Users\\Karl\\Documents\\learnify TUC\\Entity\\Entity.csproj",
-        "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Karl\\Documents\\learnify TUC\\Entity\\obj\\",
+        "projectPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Entity\\Entity.csproj",
+        "packagesPath": "C:\\Users\\karle\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Karl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\karle\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -108,7 +113,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -136,6 +140,12 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
             }
           },
           "imports": [
@@ -153,24 +163,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Karl\\Documents\\learnify TUC\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Karl\\Documents\\learnify TUC\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\Karl\\Documents\\learnify TUC\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Karl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Karl\\Documents\\learnify TUC\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\karle\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Karl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\karle\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -179,15 +189,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Karl\\Documents\\learnify TUC\\Entity\\Entity.csproj": {
-                "projectPath": "C:\\Users\\Karl\\Documents\\learnify TUC\\Entity\\Entity.csproj"
+              "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Entity\\Entity.csproj"
               }
             }
           }
@@ -211,6 +220,12 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
             }
           },
           "imports": [
@@ -228,7 +243,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }
