@@ -7,6 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Entity.Interfaces;
+using API.Helpers;
+
 namespace API
 {
     public class Startup
@@ -24,6 +26,9 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<ICourseRepository, CourseRepository>();
+            services.AddAutoMapper(typeof(MappingProfiles));
+            services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddControllers();
             services.AddDbContext<StoreContext>(x =>
                x.UseSqlite(_config.GetConnectionString("DefaultConnection")));
@@ -40,7 +45,6 @@ namespace API
               });
           });
         }
-
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

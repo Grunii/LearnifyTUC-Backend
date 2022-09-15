@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xgC/+K5G/3WoNwZ9ISpQhivAZx7zybZHDReVHTcl0SZKIXcXONXkJhBrrwQNe0wThO0G5eE3EuOVNPFu+SOtEQ==",
+  "dgSpecHash": "qOn3/c9AMoP5dqErXaR65IohqjoUYWfpsaFhNEUs3RvOMQa77I6OX5ooRtJcdiPfvPKc3+lnPFcqB2qx2t5vtQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Entity\\Entity.csproj",
+  "projectFilePath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Entity\\Entity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\karle\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\karle\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

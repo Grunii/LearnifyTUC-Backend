@@ -14,27 +14,73 @@ namespace Infrastructure
         public static async Task SeedAsync(StoreContext context, ILogger logger)
         {
 
-            try {
+            try
+            {
+
+                if (!context.Categories.Any())
+                {
+                    var CategoryData = File.ReadAllText("../Infrastructure/SeedData/Categories.json");
+                    var categories = JsonSerializer.Deserialize<List<Category>>(CategoryData);
+
+                    foreach (var item in categories)
+                    {
+                        context.Categories.Add(item);
+                    }
+
+                    await context.SaveChangesAsync();
+
+                }
+
                 if (!context.Courses.Any())
                 {
-                   var courseData = File.ReadAllText("../Infrastructure/SeedData/courses.json");
-                   var courses = JsonSerializer.Deserialize<List<Course>>(courseData);
+                    var courseData = File.ReadAllText("../Infrastructure/SeedData/courses.json");
+                    var courses = JsonSerializer.Deserialize<List<Course>>(courseData);
 
-                  foreach (var item in courses)
-                  {
-                      context.Courses.Add(item);
-                  }
+                    foreach (var item in courses)
+                    {
+                        context.Courses.Add(item);
+                    }
 
-                  await context.SaveChangesAsync();
-                   
+                    await context.SaveChangesAsync();
+
                 }
-            }
-               catch(Exception ex)
+                if (!context.Learnings.Any())
+                {
+                    var learningData = File.ReadAllText("../Infrastructure/SeedData/learnings.json");
+                    var learnings = JsonSerializer.Deserialize<List<Learning>>(learningData);
 
-               {
-                   logger.LogError(ex.Message);
-               }
-        
+                    foreach (var item in learnings)
+                    {
+                        context.Learnings.Add(item);
+                    }
+
+                    await context.SaveChangesAsync();
+
+                }
+
+                if (!context.Requirements.Any())
+                {
+                    var requirmentData = File.ReadAllText("../Infrastructure/SeedData/requirements.json");
+                    var requirments = JsonSerializer.Deserialize<List<Requirement>>(requirmentData);
+
+                    foreach (var item in requirments)
+                    {
+                        context.Requirements.Add(item);
+                    }
+
+                    await context.SaveChangesAsync();
+
+                }
+
+
+            }
+
+            catch (Exception ex)
+
+            {
+                logger.LogError(ex.Message);
+            }
+
 
         }
     }

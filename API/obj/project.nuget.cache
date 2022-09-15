@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "8LtaHSPbzh3Vn2+k/utb0ytSS1APIBlRemd0iXZyS1Cxc4ilGfraPGzuKe7eg7ToES+ER2XPW3AbjC5B3TVkbQ==",
+  "dgSpecHash": "Gav2uhheOx8wAX5zr/OK/a8DFCay4jSBhDEeUKLl1FKglripYiFyOq9IC2H3slH73DHSaVjQzcC6N8hAYeAqkA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\api\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\karle\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\karle\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\karle\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\karle\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\karle\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.17\\microsoft.data.sqlite.core.5.0.17.nupkg.sha512",
@@ -39,7 +41,8 @@
     "C:\\Users\\karle\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\karle\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\karle\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
-    "C:\\Users\\karle\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+    "C:\\Users\\karle\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\karle\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
