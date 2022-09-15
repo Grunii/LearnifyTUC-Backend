@@ -1116,11 +1116,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Entity\\Entity.csproj",
+      "projectUniqueName": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\learnifyTUC-Backend\\Entity\\Entity.csproj",
       "projectName": "Entity",
-      "projectPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Entity\\Entity.csproj",
+      "projectPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\learnifyTUC-Backend\\Entity\\Entity.csproj",
       "packagesPath": "C:\\Users\\karle\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyTUC-Backend-main\\Entity\\obj\\",
+      "outputPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\learnifyTUC-Backend\\Entity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
