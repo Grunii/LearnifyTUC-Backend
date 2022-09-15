@@ -1,19 +1,45 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using Entity;
 using Entity.Interfaces;
+using Entity.Specifications;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure
 {
-    public class GenericRepository<T> : IGenericRepository<T>
+    public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        public Task<T> GetByIdAsync(dynamic id)
+        private readonly StoreContext _context;
+        public GenericRepository(StoreContext context)
         {
-            throw new System.NotImplementedException();
+            _context = context;
         }
 
-        public Task<IReadOnlyList<T>> ListAllAsync()
+        public async Task<T> GetByIdAsync(dynamic id)
         {
-            throw new System.NotImplementedException();
+            return await _context.Set<T>().FindAsync(id);
+        }
+
+        public async Task<T> GetEntityWithSpec(ISpecification<T> spec)
+        {
+            return await ApplySpec(spec).FirstOrDefaultAsync();
+        }
+
+        public async Task<IReadOnlyList<T>> ListAllAsync()
+        {
+            return await _context.Set<T>().ToListAsync();
+        }
+
+        public async Task<IReadOnlyList<T>> ListWithSpec(ISpecification<T> spec)
+        {
+            return await ApplySpec(spec).ToListAsync();
+        }
+
+        private IQueryable<T> ApplySpec(ISpecification<T> spec)
+        {
+            return SpecificationEvaluator<T>.GetQuery(_context.Set<T>().AsQueryable(), spec);
+
         }
     }
 }
