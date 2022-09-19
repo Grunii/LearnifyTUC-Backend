@@ -16,3 +16,39 @@ C:\Users\Karl\Documents\learnify TUC\Infrastructure\obj\Debug\net5.0\Infrastruct
 C:\Users\Karl\Documents\learnify TUC\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.json
 C:\Users\Karl\Documents\learnify TUC\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.dev.json
 C:\Users\Karl\Documents\learnify TUC\Infrastructure\obj\Debug\net5.0\Infrastructure.genruntimeconfig.cache
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\bin\Debug\net5.0\Infrastructure.deps.json
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.json
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.dev.json
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\bin\Debug\net5.0\Entity.dll
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\bin\Debug\net5.0\Entity.pdb
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CopyComplete
+C:\Users\karle\OneDrive\Skrivbord\LearnifyTUC-Backend-main\Infrastructure\obj\Debug\net5.0\Infrastructure.genruntimeconfig.cache
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\bin\Debug\net5.0\Infrastructure.deps.json
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.json
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.dev.json
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\bin\Debug\net5.0\Entity.dll
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\bin\Debug\net5.0\Entity.pdb
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CopyComplete
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
+C:\Users\karle\OneDrive\Skrivbord\LearnifyV3\learnifyTUC-Backend\Infrastructure\obj\Debug\net5.0\Infrastructure.genruntimeconfig.cache
