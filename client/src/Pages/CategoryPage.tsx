@@ -1,39 +1,36 @@
-import React, { useEffect, useState } from "react";
-import agent from "../actions/agent";
-import { Row } from "antd";
-
-import { useParams } from "react-router-dom";
-import ShowCourses from "../Components/ShowCourses";
-import { Course } from "../models/course";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Category } from "../models/category";
+import { useAppDispatch, useAppSelector } from "../redux/store/configureStore";
+import {
+    categoriesSelector,
+    getCategoriesAsync,
+} from "../redux/slice/categorySlice";
 
-const CategoryPage = () => {
-    const [data, setData] = useState<Category>();
-    const { id } = useParams<{ id: string }>();
+const Categories = () => {
+    const categories = useAppSelector(categoriesSelector.selectAll);
+    const dispatch = useAppDispatch();
+    const { categoriesLoaded } = useAppSelector((state) => state.category);
 
     useEffect(() => {
-        agent.Categories.getCategory(parseInt(id)).then((response) => {
-            setData(response);
-        });
-    }, [id]);
+        if (!categoriesLoaded) dispatch(getCategoriesAsync());
+    }, [categoriesLoaded, dispatch]);
 
     return (
-        <div className="course">
-            <div className="course__header">
-                <h1>Pick a course from your favorite category!</h1>
-                <h2>{data?.name}</h2>
-            </div>
-            <Row gutter={[24, 32]}>
-                {data?.courses?.length ? (
-                    data?.courses!.map((course: Course, index: number) => {
-                        return <ShowCourses key={index} course={course} />;
-                    })
-                ) : (
-                    <h1>No Courses found in this Category!</h1>
-                )}
-            </Row>
+        <div className="categories">
+            {categories &&
+                categories.map((category: Category, index: number) => {
+                    return (
+                        <Link key={index} to={`/category/${category.id}`}>
+                            <div className="categories__name">
+                                {" "}
+                                {category.name}
+                            </div>
+                        </Link>
+                    );
+                })}
         </div>
     );
 };
 
-export default CategoryPage;
+export default Categories;
