@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Entity;
 using Entity.Interfaces;
 using Entity.Specifications;
+using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure
@@ -29,6 +30,10 @@ namespace Infrastructure
         public async Task<IReadOnlyList<T>> ListAllAsync()
         {
             return await _context.Set<T>().ToListAsync();
+        }
+        public async Task<int> CountResultAsync(ISpecification<T> spec)
+        {
+            return await ApplySpec(spec).CountAsync();
         }
 
         public async Task<IReadOnlyList<T>> ListWithSpec(ISpecification<T> spec)
