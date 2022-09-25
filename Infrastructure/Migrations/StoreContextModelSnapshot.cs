@@ -16,6 +16,41 @@ namespace Infrastructure.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.17");
 
+            modelBuilder.Entity("Entity.Basket", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ClientId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Basket");
+                });
+
+            modelBuilder.Entity("Entity.BasketItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("BasketId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<Guid>("CourseId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BasketId");
+
+                    b.HasIndex("CourseId");
+
+                    b.ToTable("BasketItem");
+                });
+
             modelBuilder.Entity("Entity.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -125,6 +160,25 @@ namespace Infrastructure.Migrations
                     b.ToTable("Requirements");
                 });
 
+            modelBuilder.Entity("Entity.BasketItem", b =>
+                {
+                    b.HasOne("Entity.Basket", "Basket")
+                        .WithMany("Items")
+                        .HasForeignKey("BasketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entity.Course", "Course")
+                        .WithMany()
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
+
+                    b.Navigation("Course");
+                });
+
             modelBuilder.Entity("Entity.Course", b =>
                 {
                     b.HasOne("Entity.Category", "Category")
@@ -156,6 +210,11 @@ namespace Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Course");
+                });
+
+            modelBuilder.Entity("Entity.Basket", b =>
+                {
+                    b.Navigation("Items");
                 });
 
             modelBuilder.Entity("Entity.Category", b =>
