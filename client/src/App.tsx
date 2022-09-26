@@ -1,39 +1,43 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
-import "antd/dist/antd.min.css";
 import "./Sass/main.scss";
-import DetailPage from "./Pages/DetailPage";
-import Homepage from "./Pages/Homepage";
-import Login from "./Pages//LoginPage";
-import Navigation from "./Components/navigation";
-import Categories from "./Components/Categories";
-import CategoryPage from "./Pages/CategoryPage";
-import DescriptionPage from "./Pages//DescriptionPage";
-import BasketPage from "./Pages/BasketPage";
-import agent from "./actions/agent";
-import { setBasket } from "./redux/slice/basketSlice";
+import "antd/dist/antd.min.css";
 import { useAppDispatch } from "./redux/store/configureStore";
+import { fetchBasketAsync } from "./redux/slice/basketSlice";
+import { fetchCurrentUser } from "./redux/slice/userSlice";
+import Navigation from "./Components/navigation";
+import Homepage from "./Pages/Homepage";
+import LoginPage from "./Pages/LoginPage";
+import DetailPage from "./Pages/DetailPage";
+import DescriptionPage from "./Pages/DescriptionPage";
+import BasketPage from "./Pages/BasketPage";
+import Loading from "./Components/Loading";
+import CheckoutWrapper from "./Pages/CheckoutPage";
+import PrivateRoute from "./Components/PrivateRoute";
+import Dashboard from "./Pages/Dashborad";
+import CategoryPage from "./Pages/CategoryPage";
+import Categories from "./Components/Categories";
 
 function App() {
     const dispatch = useAppDispatch();
+    const [loading, setLoading] = useState(true);
 
-    function getCookie(name: string) {
-        return (
-            document.cookie
-                .match("(^|;)\\s*" + name + "\\s*=\\s*([^;]+)")
-                ?.pop() || ""
-        );
-    }
-
-    useEffect(() => {
-        const clientId = getCookie("clientId");
-        if (clientId) {
-            agent.Baskets.get()
-                .then((basket) => dispatch(setBasket(basket)))
-                .catch((error) => console.log(error));
+    const appInit = useCallback(async () => {
+        try {
+            await dispatch(fetchCurrentUser());
+            await dispatch(fetchBasketAsync());
+        } catch (error) {
+            console.log(error);
         }
     }, [dispatch]);
+
+    useEffect(() => {
+        appInit().then(() => setLoading(false));
+    }, [appInit]);
+
+    if (loading) return <Loading />;
+
     return (
         <>
             <Navigation />
@@ -43,11 +47,16 @@ function App() {
                 <Route exact path="/course/:id" component={DescriptionPage} />
                 <Route exact path="/basket" component={BasketPage} />
                 <Route exact path="/category/:id" component={CategoryPage} />
-                <Route exact path="/login" component={Login} />
+                <Route exact path="/login" component={LoginPage} />
                 <Route exact path="/detail" component={DetailPage} />
+                <PrivateRoute
+                    exact
+                    path="/checkout"
+                    component={CheckoutWrapper}
+                />
+                <PrivateRoute exact path="/profile" component={Dashboard} />
             </Switch>
         </>
     );
 }
-
 export default App;

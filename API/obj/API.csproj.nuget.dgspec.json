@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\API\\API.csproj": {}
+    "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\api\\API.csproj": {}
   },
   "projects": {
-    "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\API\\API.csproj": {
+    "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\API\\API.csproj",
+        "projectPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\api\\API.csproj",
         "packagesPath": "C:\\Users\\karle\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\API\\obj\\",
+        "outputPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -25,14 +25,18 @@
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Entity\\Entity.csproj"
+              },
+              "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -75,9 +79,21 @@
               "target": "Package",
               "version": "[5.0.17, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.15.1, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.97.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.15.1, )"
             }
           },
           "imports": [
@@ -98,18 +114,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Entity\\Entity.csproj": {
+    "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Entity\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Entity\\Entity.csproj",
+        "projectPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Entity\\Entity.csproj",
         "packagesPath": "C:\\Users\\karle\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Entity\\obj\\",
+        "outputPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -161,6 +177,18 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.15.1, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.97.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.15.1, )"
             }
           },
           "imports": [
@@ -178,18 +206,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\karle\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -210,8 +238,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Entity\\Entity.csproj": {
-                "projectPath": "c:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Entity\\Entity.csproj"
+              "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\karle\\OneDrive\\Skrivbord\\LearnifyV3\\LearnifyTUC-Backend\\Entity\\Entity.csproj"
               }
             }
           }
@@ -245,6 +273,18 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.15.1, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.97.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.15.1, )"
             }
           },
           "imports": [
@@ -262,7 +302,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }
