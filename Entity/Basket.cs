@@ -12,7 +12,11 @@ namespace Entity
 
         public List<BasketItem> Items { get; set; } = new List<BasketItem>();
 
-        public void AddCourseItem(Course course)
+        public string PaymentIntentId { get; set; }
+
+        public string ClientSecret { get; set; }
+
+        public void AddCourse(Course course)
         {
             if (Items.All(item => item.CourseId != course.Id))
             {
@@ -20,10 +24,17 @@ namespace Entity
             }
         }
 
-        public void RemoveCourseItem(Guid courseId)
+        public void RemoveCourse(Guid courseId)
         {
             var course = Items.FirstOrDefault(item => item.CourseId == courseId);
             Items.Remove(course);
+        }
+
+        public void ClearBasket()
+        {
+            PaymentIntentId = null;
+            ClientSecret = null;
+            Items.Clear();
         }
     }
 }

@@ -1,6 +1,7 @@
 import { Dropdown, Menu } from "antd";
 import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
+import { removeBasket } from "../redux/slice/basketSlice";
 import { signOut } from "../redux/slice/userSlice";
 
 const UserMenu = () => {
@@ -9,6 +10,7 @@ const UserMenu = () => {
 
     const signout = () => {
         dispatch(signOut());
+        dispatch(removeBasket());
         history.push("/");
     };
 
@@ -23,7 +25,7 @@ const UserMenu = () => {
         </Menu>
     );
     return (
-        <Dropdown overlay={menu} placement="bottomCenter">
+        <Dropdown overlay={menu} placement="bottom">
             <div className="dropdown">Menu</div>
         </Dropdown>
     );

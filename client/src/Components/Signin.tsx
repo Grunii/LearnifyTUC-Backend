@@ -1,6 +1,7 @@
 import { Button, Card, Form, Input, notification, Typography } from "antd";
 import { Content } from "antd/lib/layout/layout";
 import { ChangeEvent, SyntheticEvent, useState } from "react";
+import { useHistory, useRouteMatch } from "react-router-dom";
 import { Login } from "../models/user";
 import { signInUser } from "../redux/slice/userSlice";
 import { useAppDispatch } from "../redux/store/configureStore";
@@ -28,6 +29,8 @@ const Signin = ({ toggleRegister }: Props) => {
         form.resetFields();
     };
 
+    const history = useHistory();
+
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setValues({ ...values, [name]: value });
@@ -41,6 +44,7 @@ const Signin = ({ toggleRegister }: Props) => {
                 password.length >= 6
             ) {
                 await dispatch(signInUser(values));
+                history.push("/profile");
             }
             resetForm();
         } catch (err: any) {

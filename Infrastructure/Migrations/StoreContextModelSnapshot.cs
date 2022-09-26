@@ -25,6 +25,12 @@ namespace Infrastructure.Migrations
                     b.Property<string>("ClientId")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("ClientSecret")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PaymentIntentId")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
                     b.ToTable("Basket");
@@ -224,6 +230,21 @@ namespace Infrastructure.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("Entity.UserCourse", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("CourseId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("UserId", "CourseId");
+
+                    b.HasIndex("CourseId");
+
+                    b.ToTable("UserCourses");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -252,15 +273,15 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "3586ea66-b8a7-4551-9db7-4cc3e93389f6",
-                            ConcurrencyStamp = "6c6a8e30-e85e-45d8-8789-5d4d55d1cabf",
+                            Id = "a2556750-8204-4acb-9d9a-a0ff32a3b404",
+                            ConcurrencyStamp = "8b90d3bd-8e72-46aa-ab77-3d93f652accd",
                             Name = "Student",
                             NormalizedName = "STUDENT"
                         },
                         new
                         {
-                            Id = "ffbcefcb-9596-439c-a9d3-e87e9ab8f680",
-                            ConcurrencyStamp = "67ee9d32-8912-46e6-8486-21e90def0f3b",
+                            Id = "12b09785-28dd-45a7-8ed8-7f867d10bf39",
+                            ConcurrencyStamp = "57346f8a-8639-41e8-9092-53943dac0466",
                             Name = "Instructor",
                             NormalizedName = "INSTRUCTOR"
                         });
@@ -420,6 +441,25 @@ namespace Infrastructure.Migrations
                     b.Navigation("Course");
                 });
 
+            modelBuilder.Entity("Entity.UserCourse", b =>
+                {
+                    b.HasOne("Entity.Course", "Course")
+                        .WithMany("UserCourses")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entity.User", "User")
+                        .WithMany("UserCourses")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -486,6 +526,13 @@ namespace Infrastructure.Migrations
                     b.Navigation("Learnings");
 
                     b.Navigation("Requirements");
+
+                    b.Navigation("UserCourses");
+                });
+
+            modelBuilder.Entity("Entity.User", b =>
+                {
+                    b.Navigation("UserCourses");
                 });
 #pragma warning restore 612, 618
         }
