@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+
 namespace Entity
 {
     public class Course : BaseEntity
@@ -14,8 +15,9 @@ namespace Entity
 
         public int Students { get; set; }
 
-        public string Description { get; set; }
+        public DateTime LastUpdated { get; set; } = DateTime.Now;
 
+        public string Description { get; set; }
         public float Price { get; set; }
 
         public string Instructor { get; set; }
@@ -24,16 +26,17 @@ namespace Entity
 
         public decimal Rating { get; set; }
 
-        public ICollection<Requirement> Requirements { get; set; }
+        public ICollection<Requirement> Requirements { get; set; } = new List<Requirement>();
 
-        public ICollection<Learning> Learnings { get; set; }
+        public ICollection<Learning> Learnings { get; set; } = new List<Learning>();
 
+        // Navigation Properties
         public int CategoryId { get; set; }
 
         public Category Category { get; set; }
 
-        public DateTime LastUpdated { get; set; } = DateTime.Now;
         public ICollection<UserCourse> UserCourses { get; set; }
 
+        public ICollection<Section> Sections { get; set; }
     }
 }
