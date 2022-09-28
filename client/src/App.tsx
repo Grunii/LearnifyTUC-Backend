@@ -18,6 +18,10 @@ import PrivateRoute from "./Components/PrivateRoute";
 import Dashboard from "./Pages/Dashborad";
 import CategoryPage from "./Pages/CategoryPage";
 import Categories from "./Components/Categories";
+import CoursePage from "./Pages/CoursePage";
+import InstructorPage from "./Pages/InstructorPage";
+import CreateCourse from "./Pages/CreateCourse";
+import { getCategoriesAsync } from "./redux/slice/categorySlice";
 
 function App() {
     const dispatch = useAppDispatch();
@@ -27,6 +31,7 @@ function App() {
         try {
             await dispatch(fetchCurrentUser());
             await dispatch(fetchBasketAsync());
+            await dispatch(getCategoriesAsync());
         } catch (error) {
             console.log(error);
         }
@@ -49,12 +54,27 @@ function App() {
                 <Route exact path="/category/:id" component={CategoryPage} />
                 <Route exact path="/login" component={LoginPage} />
                 <Route exact path="/detail" component={DetailPage} />
+                <PrivateRoute exact path="/profile" component={Dashboard} />
+                <PrivateRoute
+                    exact
+                    path="/learn/:course/:lecture"
+                    component={CoursePage}
+                />
                 <PrivateRoute
                     exact
                     path="/checkout"
                     component={CheckoutWrapper}
                 />
-                <PrivateRoute exact path="/profile" component={Dashboard} />
+                <PrivateRoute
+                    exact
+                    path="/instructor"
+                    component={InstructorPage}
+                />
+                <PrivateRoute
+                    exact
+                    path="/instructor/course"
+                    component={CreateCourse}
+                />
             </Switch>
         </>
     );
