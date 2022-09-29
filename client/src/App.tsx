@@ -22,6 +22,7 @@ import CoursePage from "./Pages/CoursePage";
 import InstructorPage from "./Pages/InstructorPage";
 import CreateCourse from "./Pages/CreateCourse";
 import { getCategoriesAsync } from "./redux/slice/categorySlice";
+import SectionPage from "./Pages/SectionPage";
 
 function App() {
     const dispatch = useAppDispatch();
@@ -74,6 +75,11 @@ function App() {
                     exact
                     path="/instructor/course"
                     component={CreateCourse}
+                />
+                <PrivateRoute
+                    exact
+                    path="/:course/lectures"
+                    component={SectionPage}
                 />
             </Switch>
         </>
