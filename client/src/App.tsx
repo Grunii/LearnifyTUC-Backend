@@ -16,13 +16,14 @@ import Loading from "./Components/Loading";
 import CheckoutWrapper from "./Pages/CheckoutPage";
 import PrivateRoute from "./Components/PrivateRoute";
 import Dashboard from "./Pages/Dashborad";
-import CategoryPage from "./Pages/CategoryPage";
+
 import Categories from "./Components/Categories";
 import CoursePage from "./Pages/CoursePage";
 import InstructorPage from "./Pages/InstructorPage";
 import CreateCourse from "./Pages/CreateCourse";
 import { getCategoriesAsync } from "./redux/slice/categorySlice";
 import SectionPage from "./Pages/SectionPage";
+import CategoryPage from "./Pages/CategoryPage";
 
 function App() {
     const dispatch = useAppDispatch();
@@ -47,7 +48,7 @@ function App() {
     return (
         <>
             <Navigation />
-            <Route exact path="/" component={Categories} />
+            <Categories />
             <Switch>
                 <Route exact path="/" component={Homepage} />
                 <Route exact path="/course/:id" component={DescriptionPage} />

@@ -1,36 +1,40 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Row } from "antd";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import agent from "../actions/agent";
+import ShowCourses from "../Components/ShowCourses";
 import { Category } from "../models/category";
-import { useAppDispatch, useAppSelector } from "../redux/store/configureStore";
-import {
-    categoriesSelector,
-    getCategoriesAsync,
-} from "../redux/slice/categorySlice";
+import { Course } from "../models/course";
 
-const Categories = () => {
-    const categories = useAppSelector(categoriesSelector.selectAll);
-    const dispatch = useAppDispatch();
-    const { categoriesLoaded } = useAppSelector((state) => state.category);
+const CategoryPage = () => {
+    const [data, setData] = useState<Category>();
+    const { id } = useParams<{ id: string }>();
 
     useEffect(() => {
-        if (!categoriesLoaded) dispatch(getCategoriesAsync());
-    }, [categoriesLoaded, dispatch]);
+        agent.Categories.getCategory(parseInt(id)).then((response) => {
+            setData(response);
+        });
+    }, [id]);
 
     return (
-        <div className="categories">
-            {categories &&
-                categories.map((category: Category, index: number) => {
-                    return (
-                        <Link key={index} to={`/category/${category.id}`}>
-                            <div className="categories__name">
-                                {" "}
-                                {category.name}
-                            </div>
-                        </Link>
-                    );
-                })}
-        </div>
+        <>
+            <div className="course">
+                <div className="course__header">
+                    <h1>Pick a course from your favorite category! </h1>
+                    <h2>{data?.name}</h2>
+                </div>
+                <Row gutter={[24, 32]}>
+                    {data?.courses?.length ? (
+                        data.courses.map((course: Course, index: number) => {
+                            return <ShowCourses key={index} course={course} />;
+                        })
+                    ) : (
+                        <h1>There are no courses in this category! </h1>
+                    )}
+                </Row>
+            </div>
+        </>
     );
 };
 
-export default Categories;
+export default CategoryPage;
