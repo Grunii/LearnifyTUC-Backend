@@ -64,6 +64,7 @@ namespace API.Controllers
 
             var result = await _context.SaveChangesAsync() > 0;
 
+
             if (result) return Ok();
 
             return BadRequest(new ApiResponse(400, "Problem updating current lecture"));

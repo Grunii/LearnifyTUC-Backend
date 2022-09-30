@@ -1,7 +1,9 @@
 .checkout {
-  display: flex;
-  max-width: 1440px;
-  margin: 0 auto;
+  min-height: 100vh;
+	width: 100%;
+	display: flex;
+    flex-direction: column;
+    background-color: #e4e0ea;
 
   & .ant-input::placeholder {
     color: $color-grey-dark-1;
@@ -10,6 +12,7 @@
   & h1 {
     font-weight: bold;
     margin-left: 10px;
+    color: #963E7B;
   }
 
   @media only screen and (max-width: $bp-medium) {
@@ -32,6 +35,7 @@
 
     & h2 {
       font-weight: bold;
+      color: #963E7B;
     }
 
     &__total {
@@ -64,6 +68,67 @@
 }
 
 .stripe-input {
-  border: solid 1px #d9d9d9;
+  border: solid 1px #111;
   padding: 7px;
+}
+
+.ant-input {
+  border: solid 1px #111!important;
+  padding: 7px;
+}
+
+.ant-card-head-title{
+  color: #963E7B;
+  font-size: large;
+  font-weight: bold;
+  
+}
+.ant-card-head {
+  min-height: 48px;
+  margin-bottom: -1px;
+  padding: 0 24px;
+  color: rgba(0,0,0,.85);
+  font-weight: 500;
+  font-size: 16px;
+  background: transparent;
+   border-bottom: 0px;
+  border-radius: 2px 2px 0 0;
+}
+.ant-form-vertical .ant-form-item-label>label {
+  color: #963E7B;
+  font-size: large;
+  font-weight: 100;
+}
+
+.ant-card body {
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0,0,0,.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  position: relative;
+  background: aliceblue!important;
+}
+
+.ant-card{
+  border-radius: 30px;
+}
+
+
+.checkout__summary .ant-btn-primary {
+  background: linear-gradient(
+    135deg
+    , #753370 0%, #298096 100%);
+        padding: 30px;
+        border: none;
+        color: white;
+        font-weight: 400;
+        font-size: 1.2rem;
+        margin-top: 10px;
+        width:100%;
+        letter-spacing: .11rem;
+        outline:none;
 }

@@ -90,7 +90,7 @@ const CheckoutPage = () => {
                                     name="cardName"
                                     onChange={handleChange}
                                     value={cardName}
-                                    placeholder="Mention the name on your card"
+                                    placeholder="John Doe"
                                 />
                             </Form.Item>
                             <Form.Item label="Card Number">

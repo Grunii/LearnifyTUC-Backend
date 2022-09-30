@@ -32,8 +32,16 @@ $border-dark: 2px solid #f4f2f2;
 
 html {
   box-sizing: border-box;
+  
 }
 
 body {
-  font-family: $font-primary, sans-serif;
+  font-family: 'Roboto', sans-serif!important;
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+  background-color: aliceblue!important;
 }
+
+
+
