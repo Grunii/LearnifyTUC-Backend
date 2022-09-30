@@ -48,10 +48,10 @@ namespace API.Controllers
             if (course == null) return NotFound(new ApiResponse(404));
 
             basket.AddCourse(course);
-
+            var result = await _context.SaveChangesAsync() > 0;
             var basketResponse = _mapper.Map<Basket, BasketDto>(basket);
 
-            var result = await _context.SaveChangesAsync() > 0;
+
 
             if (result) return basketResponse;
 

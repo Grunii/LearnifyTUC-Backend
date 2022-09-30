@@ -41,7 +41,18 @@ body {
 	padding:0;
 	box-sizing: border-box;
   background-color: aliceblue!important;
+
 }
 
-
-
+.page-content {
+  display: -webkit-box;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+.ant-row {
+  flex-flow: initial!important;
+  min-width: 0;
+}
