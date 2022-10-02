@@ -75,8 +75,13 @@ const Navigation = () => {
                             </ul>
                         </nav>
                     </div>
-                    <img src={Logo} className="nav__left__logo" alt="logo" />
-
+                    <Link to="/">
+                        <img
+                            src={Logo}
+                            className="nav__left__logo"
+                            alt="logo"
+                        />
+                    </Link>
                     <ul className="nav__left__list">
                         <Link to="/">
                             <li className="nav__left__list__item">Home</li>

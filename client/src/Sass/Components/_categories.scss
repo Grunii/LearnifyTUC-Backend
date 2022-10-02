@@ -1,12 +1,12 @@
 .categories {
-    background-color: white;
+    background-color: aliceblue;
     height: 50px;
     display: flex;
     width: 100%;
     justify-content: center;
     overflow: hidden;
     padding: 0 10px;
-    box-shadow: $shadow-light;
+    box-shadow: $shadow-dark;
   
     @media only screen and (max-width: $bp-small) {
       display: none;

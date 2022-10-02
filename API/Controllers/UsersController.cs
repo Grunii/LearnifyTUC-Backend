@@ -1,6 +1,6 @@
 using System.Linq;
 using System.Threading.Tasks;
-using System.Text.Json;
+using System.Collections.Generic;
 using API.Dto;
 using API.ErrorResponse;
 using AutoMapper;
@@ -132,6 +132,25 @@ namespace API.Controllers
             };
         }
 
+        [Authorize]
+        [HttpPost("addRole")]
+
+        public async Task<ActionResult> AddRole()
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            await _userManager.AddToRoleAsync(user, "Instructor");
+            return Ok();
+        }
+        [Authorize]
+        [HttpGet("unpublishedCourses")]
+
+        public List<Course> unpublishedCourses()
+        {
+            var courses = _context.Courses.Where(x => x.Instructor == User.Identity.Name).Where(x => x.Published == false).ToList();
+
+            return courses;
+        }
 
         private async Task<Basket> ExtractBasket(string clientId)
         {

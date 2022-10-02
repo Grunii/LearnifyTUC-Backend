@@ -106,6 +106,9 @@ namespace Infrastructure.Migrations
                     b.Property<float>("Price")
                         .HasColumnType("REAL");
 
+                    b.Property<bool>("Published")
+                        .HasColumnType("INTEGER");
+
                     b.Property<decimal>("Rating")
                         .HasColumnType("decimal(18,1)");
 
@@ -147,6 +150,28 @@ namespace Infrastructure.Migrations
                     b.ToTable("Learnings");
                 });
 
+            modelBuilder.Entity("Entity.Lecture", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("SectionId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Url")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SectionId");
+
+                    b.ToTable("Lectures");
+                });
+
             modelBuilder.Entity("Entity.Requirement", b =>
                 {
                     b.Property<int>("Id")
@@ -164,6 +189,25 @@ namespace Infrastructure.Migrations
                     b.HasIndex("CourseId");
 
                     b.ToTable("Requirements");
+                });
+
+            modelBuilder.Entity("Entity.Section", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<Guid>("CourseId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.ToTable("Sections");
                 });
 
             modelBuilder.Entity("Entity.User", b =>
@@ -238,6 +282,9 @@ namespace Infrastructure.Migrations
                     b.Property<Guid>("CourseId")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("CurrentLecture")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("UserId", "CourseId");
 
                     b.HasIndex("CourseId");
@@ -273,15 +320,15 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "a2556750-8204-4acb-9d9a-a0ff32a3b404",
-                            ConcurrencyStamp = "8b90d3bd-8e72-46aa-ab77-3d93f652accd",
+                            Id = "fc8b2d8c-2395-4286-a13e-c1d33b05f87e",
+                            ConcurrencyStamp = "c7f6ac91-b38e-453d-bc35-35562b74f8fc",
                             Name = "Student",
                             NormalizedName = "STUDENT"
                         },
                         new
                         {
-                            Id = "12b09785-28dd-45a7-8ed8-7f867d10bf39",
-                            ConcurrencyStamp = "57346f8a-8639-41e8-9092-53943dac0466",
+                            Id = "bf9cda69-f63e-48d8-bef6-95ef0347b8fb",
+                            ConcurrencyStamp = "40329caf-cf6a-4a18-9c45-44c88fa6f441",
                             Name = "Instructor",
                             NormalizedName = "INSTRUCTOR"
                         });
@@ -430,10 +477,32 @@ namespace Infrastructure.Migrations
                     b.Navigation("Course");
                 });
 
+            modelBuilder.Entity("Entity.Lecture", b =>
+                {
+                    b.HasOne("Entity.Section", "Section")
+                        .WithMany("Lectures")
+                        .HasForeignKey("SectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Section");
+                });
+
             modelBuilder.Entity("Entity.Requirement", b =>
                 {
                     b.HasOne("Entity.Course", "Course")
                         .WithMany("Requirements")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+                });
+
+            modelBuilder.Entity("Entity.Section", b =>
+                {
+                    b.HasOne("Entity.Course", "Course")
+                        .WithMany("Sections")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -527,7 +596,14 @@ namespace Infrastructure.Migrations
 
                     b.Navigation("Requirements");
 
+                    b.Navigation("Sections");
+
                     b.Navigation("UserCourses");
+                });
+
+            modelBuilder.Entity("Entity.Section", b =>
+                {
+                    b.Navigation("Lectures");
                 });
 
             modelBuilder.Entity("Entity.User", b =>
