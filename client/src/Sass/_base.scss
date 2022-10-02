@@ -1,3 +1,4 @@
+
 //Font
 $font-primary: 'Lato';
 
@@ -32,7 +33,15 @@ $border-dark: 2px solid #f4f2f2;
 
 html {
   box-sizing: border-box;
+  margin:0;
+	padding:0;
   
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: #963E7B!important;
+  font-weight: 500;
 }
 
 body {
@@ -40,7 +49,7 @@ body {
 	margin:0;
 	padding:0;
 	box-sizing: border-box;
-  background-color: aliceblue!important;
+  background-color: #e4e0ea!important;
 
 }
 
@@ -55,4 +64,12 @@ body {
 .ant-row {
   flex-flow: initial!important;
   min-width: 0;
+  margin: 0!important;
+}
+
+.nav-menu-items li {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white!important;
+  font-weight: bold;
 }

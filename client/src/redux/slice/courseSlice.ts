@@ -63,7 +63,7 @@ import {
   function getParams() {
     return {
       pageIndex: 1,
-      pageSize: 3,
+      pageSize: 4,
       sort: "title",
     };
   }

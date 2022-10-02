@@ -50,8 +50,8 @@ const Homepage = () => {
                 <h2>New Courses picked just for you...</h2>
             </div>
             <Row gutter={[24, 32]}>
-                <Col span={4}>
-                    <Card title="Sorting Options">
+                <Col span={3}>
+                    <Card title="Sorting Options" className="Sorting">
                         <Radio.Group
                             options={sortOptions}
                             value={courseParams.sort}

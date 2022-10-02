@@ -111,6 +111,7 @@ const ShowCourses = ({ course }: Props) => {
         //     </Col>
 
         <main className="page-content">
+            {<img width="100%" alt="course-cover" src={course.image} />}
             <div className="card">
                 <div className="content">
                     <h2 className="title">
